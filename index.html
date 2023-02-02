@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Stabilization</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/4551689.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Self-supervised Deep Learning Approach For Video Stabilization Process</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Mehmet SARIGÜL</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Levent KARACAN</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">M.Kerim SOLMAZ</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Semiha DERVİŞOĞLU</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Hasan AVŞAR</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Iskenderun Technical University,</span>
+            <span class="author-block"><sup>2</sup>Bilecik Şeyh Edebali University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#demo_111"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Papers</span>
+                </a>
+              </span>
+              <span class="link-block">
+     
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/videostab"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Codes</span>
+                  </a>
+              </span>
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In video recordings taken with mobile devices such as handheld cameras, head cameras, mobile phones, undesired visual
+            effects are formed such as shaking, flickering or periodic camera movements. The processes that eliminate these
+            undesired effects are called as video stabilization. With the need to shoot video from moving platforms such as cars,
+            unmanned aircrafts, wearable devices, the need for inexpensive and effective video stabilization has also increased.
+            Although certain types of high-frequency motion effects can be eliminated with special equipment placed on camera
+            systems, these equipment are both expensive and power consuming. In addition, motion range and degrees of freedom
+            are limited in these systems. To overcome these limitations, computer vision methods basically try to estimate undesired
+            motion between video frames by tracking various types of visual features, and then they correct camera path by warping
+            scenes according to the estimated motion. In these methods, selecting the correct visual features and tracking algorithm
+            is crucial for the performance of the method. As a result, the problem arises of determining which feature extractors and
+            tracking algorithms should be used for different types of scenes. Unlike these methods that are difficult to adapt to new
+            types of scenes and costly in terms of computation, learning-based methods have been developed. in recent years.
+            However, these works use supervised learning methods that need a dataset containing a limited number of scenes with
+            both stable and unstable pairs of the same scene obtained with special equipment. Hence, obtained models are dataset
+            dependent and cannot be easily adapted to new scenes in different context and semantics.
+          </p>
+          <p>
+            In this project, we will explore to use unsupervised learning techniques on a video processing problem. More specifically,
+            a novel self-supervised video stabilization method which does not require stable video supervision during training will be
+            developed to overcome the dataset barrier in recent supervised learning methods and fill the gap of unsupervised video
+            stabilization. Producing new dataset with proper labels is expensive and time-consuming even though abundance of
+            unlabeled data. With this research, we will demonstrate that camera movements for video stabilization can be generated
+            synthetically from the data itself and this can be used for training. The goal with this new self-supervised learning approach
+            is to develop a new video stabilization model which is faster and more robust than previous non-learning-based methods
+            and also more generalizable and more successful than deep supervised learning-based approaches which require stable
+            video supervision. For this purpose, we will first study on learning the visual features required to distinguish desired and
+            undesired motions in videos. Then, with the help of these visual features, a suitable self-supervised learning method will
+            be investigated so that transformations that cause undesired motions will be predicted. In the last stage, we will develop
+            a novel video to video translation model which translates unstable input videos to stable videos using conditional
+            Generative Adversarial Network conditioned by predicted transformations. 
+
+          </p>
+          <p>
+            The video stabilization is closely related with many other computer vision problems such as video classification, video
+            generation, future frame prediction, motion detection, etc. Therefore, various knowledge, skills and experience related to
+            all these problems will be gained, new researchers will be trained on related problems and thesis studies will be conducted.
+            The video stabilization method will be developed can be used in various industrial areas such as automotive, defense
+            industry, healthcare industry, etc. This project has also high potential to lead new projects. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+    
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Papers</h2>
+        <div class="content has-text-justified">
+	  <h4  class="title is-5" id = "demo_111" ><i>Classifying stable and unstable videos with deep convolutional networks</i></h4>
+          <p>
+		<a href="http://asd.islerya.com/indir.php?id=125">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Learning-Based Image Rendering</i></h4>
+          <p>
+		<a href="https://asd.islerya.com/indir.php?id=189">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Interpolation-based smart video stabilization</i></h4>
+          <p>
+		<a href="http://asd.islerya.com/indir.php?id=185">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Scene Construction from Depth Map Using Image-to-Image Translation Model</i></h4>
+          <p>
+		<a href="https://asd.islerya.com/indir.php?id=192">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Region Contrastive Camera Localization</i></h4>
+          <p>
+		<a href="https://papers.ssrn.com/sol3/Delivery.cfm/3d1b709c-d0a2-49a5-8560-33f3d56ccaef-MECA.pdf?abstractid=4105115&mirid=1">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Performance Evaluation of Different Optimization Techniques for Image-based Camera Localization</i></h4>
+          <p>
+		<a href="https://ieeexplore.ieee.org/document/9864688">Click For Paper</a>
+          </p>
+	  <h4  class="title is-5"  ><i>Pattern Recognition Letters Region Contrastive Camera Localization</i></h4>
+          <p>
+		<a href=#>Paper Available Soon</a>
+          </p>
+	  <h4  class="title is-5"  ><i>An Optimization-Based Video Stabilization Approach</i></h4>
+          <p>
+		<a href="https://www.researchgate.net/profile/Semiha-Dervisoglu/publication/366896504_AN_OPTIMIZATION-BASED_VIDEO_STABILIZATION_APPROACH/links/63b706b1097c7832ca91c4c2/AN-OPTIMIZATION-BASED-VIDEO-STABILIZATION-APPROACH.pdf?_sg%5B0%5D=sYrUJEjl9fmm7fqwfSvJiSq_eKUVr7sOYkorG8hIUqdbZl_eKBNBInJ7NY6HcxTTcP0YbQx_9EA4l9-bMG6O_AcFkZO_2Oufw0g.IkMHFzKcNW0bo1U96n0dSefiXo0HJQ8hMrFtzoPG914RnYt61PdPvJZoqs5ykB_CJedK63yg0YA6QT8kfPwVhw&origin=profileContributionsPublicationsListItem&_rtd=e30%3D">Click For Paper</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/videostab" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
